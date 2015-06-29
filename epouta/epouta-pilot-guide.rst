@@ -44,3 +44,9 @@ Differences compared to cPouta
 * No floating IPs are available to be attached to virtual machines nor will they
   be in the future.
 * The web interface and the APIs are only accessible from whitelisted IP ranges.
+
+Getting support
+---------------
+
+Questions and reports about issues can be sent to `cloud-support@csc.fi
+<mailto:cloud-support@csc.fi>`_.
