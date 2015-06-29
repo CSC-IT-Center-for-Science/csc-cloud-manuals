@@ -12,6 +12,18 @@ quite similar to cPouta, so if you are familiar with that service you should be
 able to start using ePouta quite easily. There are some differences which are
 listed under the heading ":ref:`differences-compared-to-cpouta`".
 
+Pilot use disclaimer
+--------------------
+
+Any virtual machines or other resources that are launched during the pilot phase
+may be removed either at some stage during the pilot phase if changes are made
+or when the service moves into production. We will give you notice about any
+destructive or potentially destructive changes beforehand. As with any IaaS
+cloud service, it is a good practice to build your resources in a way that is
+easy to replicate in a situation where existing resources get destroyed. We
+recommend using configuration management tools when deploying virtual machines
+in the cloud.
+
 Getting access
 --------------
 
@@ -23,18 +35,41 @@ computing project, you need to apply for one here:
 `Applying for Computing Resources
 <https://research.csc.fi/applying-for-computing-resources>`_
 
+For the pilot phase, we will do initial bootstrapping of new customer projects
+through email. We will send you a set of questions to connect your network to
+ePouta so that you can access virtual machines and to whitelist IP ranges for
+web interface and API access, as you will only be able to access these through
+whitelisted IP ranges. If you want to access ePouta from a network or IP
+address that isn't currently whitelisted, you can request that the new range be
+added to the firewall by sending a request to the `cloud-support
+<mailto:cloud-support@csc.fi>`_ email address. After verifying that the request
+is legitimate, we will add the new IP address(es) to the whitelist.
+
 Using ePouta
 ------------
 
-You can mostly follow the `cPouta User Guide
+The address for the ePouta web interface is https://epouta.csc.fi. You can
+mostly follow the `cPouta User Guide
 <https://research.csc.fi/pouta-user-guide>`_ for instructions on how to use
 OpenStack. If you want to use `command line tools
 <https://research.csc.fi/pouta-command-line-tools>`_, the only command line tool
 that works with ePouta is the common "openstack" tool.
 
-When you login, you need to specify a user domain. This is always "users".
+When you login, you need to specify a user domain. This is always "users":
 
 .. image:: ../.static/images/horizon-login-domain-users.png
+
+Connecting to virtual machines
+------------------------------
+
+Unlike in cPouta and other typical IaaS clouds, in ePouta the virtual machines
+don't have access to the public Internet. Instead, virtual machines of an
+individual customer are only connected to that customer's own network through
+either an OPN (Optical Private Network) or MPLS (Multiprotocol Label Switching)
+connection. This means that in order to access your virtual machines, you will
+go through your own organization's network instead of going over the public
+Internet. This also means that running public web services on ePouta is not
+possible.
 
 .. _differences-compared-to-cpouta:
 
@@ -44,6 +79,8 @@ Differences compared to cPouta
 * No floating IPs are available to be attached to virtual machines nor will they
   be in the future.
 * The web interface and the APIs are only accessible from whitelisted IP ranges.
+* You need to specify a domain when logging in to the web interface. This is
+  always "users".
 
 Getting support
 ---------------
