@@ -48,8 +48,8 @@ request to `cloud-support@csc.fi <mailto:cloud-support@csc.fi>`_.
 .. image:: ../.static/images/epouta-connections.png
 
 The above image shows the connections to virtual machines and to the management
-interface in ePouta ("OpenStack"). As can be seen the image, the network of the
-virtual machines running in ePouta is completely separate from the public
+interface in ePouta ("OpenStack"). As can be seen in the image, the network of
+the virtual machines running in ePouta is completely separate from the public
 Internet.
 
 To create the connection between your site and ePouta, some initial information
