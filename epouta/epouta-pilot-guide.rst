@@ -24,8 +24,53 @@ easy to replicate in a situation where existing resources get destroyed. We
 recommend using configuration management tools when deploying virtual machines
 in the cloud.
 
-Getting access
---------------
+Initial setup for customers
+---------------------------
+
+Some initial steps are required before you can start using ePouta: connecting
+your organization's network to ePouta and getting user accounts for those users
+that need to manage (start/stop/destroy etc.) virtual machines.
+
+Setting up networking between your site and ePouta
+..................................................
+
+Unlike in cPouta and other typical IaaS clouds, in ePouta the virtual machines
+don't have access to the public Internet. Instead, virtual machines of an
+individual customer are only connected to that customer's own network through
+either an OPN (Optical Private Network) or - within FUNET and European academic
+networks - an MPLS (Multiprotocol Label Switching)
+connection. This means that in order to access your virtual machines, you will
+go through your own organization's network instead of going over the public
+Internet. This also means that running public web services on ePouta is not
+possible. To get started with connecting your network to ePouta, please send a
+request to `cloud-support@csc.fi <mailto:cloud-support@csc.fi>`_.
+
+.. image:: ../.static/images/epouta-connections.png
+
+The above image shows the connections to virtual machines and to the management
+interface in ePouta ("OpenStack"). As can be seen the image, the network of the
+virtual machines running in ePouta is completely separate from the public
+Internet.
+
+To create the connection between your site and ePouta, some initial information
+is required:
+
+#. A range of IP addresses from which addresses will be allocated to virtual
+   machines running in ePouta
+#. The IP address of the gateway in the subnet in which the IP range is
+#. The IP addresses of DNS servers that should be used by virtual machines and
+   that are accessible from the subnet
+#. A set of IP addresses or ranges ("Admin machine" in the image above) that
+   will be allowed to access the management interfaces of ePouta ("OpenStack" in
+   the image above)
+
+During the process of setting up the connection between your site and ePouta, we
+will send you email asking you to provide this information. If you later wish to
+e.g. add more IP addresses to be whitelisted for access to the ePouta
+interfaces, please send email to `cloud-support <mailto:cloud-support@csc.fi>`_.
+
+Getting access to OpenStack
+...........................
 
 The process of getting access to use the ePouta web interface and APIs is partly
 the same one you would use for cPouta. You will need a computing project and
@@ -35,18 +80,8 @@ computing project, you need to apply for one here:
 `Applying for Computing Resources
 <https://research.csc.fi/applying-for-computing-resources>`_
 
-For the pilot phase, we will do initial bootstrapping of new customer projects
-through email. We will send you a set of questions to connect your network to
-ePouta so that you can access virtual machines and to whitelist IP ranges for
-web interface and API access, as you will only be able to access these through
-whitelisted IP ranges. If you want to access ePouta from a network or IP
-address that isn't currently whitelisted, you can request that the new range be
-added to the firewall by sending a request to the `cloud-support
-<mailto:cloud-support@csc.fi>`_ email address. After verifying that the request
-is legitimate, we will add the new IP address(es) to the whitelist.
-
-Using ePouta
-------------
+Logging in
+..........
 
 The address for the ePouta web interface is https://epouta.csc.fi. You can
 mostly follow the `cPouta User Guide
@@ -58,18 +93,6 @@ that works with ePouta is the common "openstack" tool.
 When you login, you need to specify a user domain. This is always "users":
 
 .. image:: ../.static/images/horizon-login-domain-users.png
-
-Connecting to virtual machines
-------------------------------
-
-Unlike in cPouta and other typical IaaS clouds, in ePouta the virtual machines
-don't have access to the public Internet. Instead, virtual machines of an
-individual customer are only connected to that customer's own network through
-either an OPN (Optical Private Network) or MPLS (Multiprotocol Label Switching)
-connection. This means that in order to access your virtual machines, you will
-go through your own organization's network instead of going over the public
-Internet. This also means that running public web services on ePouta is not
-possible.
 
 .. _differences-compared-to-cpouta:
 
