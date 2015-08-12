@@ -86,15 +86,31 @@ Logging in
 The address for the ePouta web interface is https://epouta.csc.fi. You can
 mostly follow the `cPouta User Guide
 <https://research.csc.fi/pouta-user-guide>`_ for instructions on how to use
-OpenStack. If you want to use `command line tools
-<https://research.csc.fi/pouta-command-line-tools>`_, the only command line tool
-that works with ePouta is the common "openstack" tool.
+OpenStack.
 
 When you login, you need to specify a user domain. This is always "users":
 
 .. image:: ../.static/images/horizon-login-domain-users.png
 
 .. _differences-compared-to-cpouta:
+
+Using ePouta from the command line
+..................................
+
+.. note::
+
+   You can only use the common "openstack" tool with ePouta. The other tools
+   (nova, cinder, glance, neutron) do not work as they do not have support for
+   domains.
+
+You can find instructions on command line usage from the `cPouta user guide
+<https://research.csc.fi/pouta-command-line-tools>`_. The commands listed on that
+page should also work against ePouta with the exception of the commands for
+using floating IP addresses, since you cannot attach floating IP addresses to
+instances in ePouta. The process for using the tools is exactly the same: you go
+to the web interface to get an openrc file, you source that file and then you
+can start using commands like "openstack server list" or "openstack server
+create".
 
 Differences compared to cPouta
 ------------------------------
@@ -104,6 +120,8 @@ Differences compared to cPouta
 * The web interface and the APIs are only accessible from whitelisted IP ranges.
 * You need to specify a domain when logging in to the web interface. This is
   always "users".
+* If you wish to use command line tools, the only command line tool that will
+  work at the moment is the common "openstack" tool
 
 Getting support
 ---------------
