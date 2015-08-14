@@ -92,7 +92,48 @@ When you login, you need to specify a user domain. This is always "users":
 
 .. image:: ../.static/images/horizon-login-domain-users.png
 
-.. _differences-compared-to-cpouta:
+Usage
+-----
+
+Flavors
+.......
+
+==================== ========= ============ ==================
+**Name**             **VCPUs** **RAM (MB)** **Root disk (GB)**
+-------------------- --------- ------------ ------------------
+hpc.mini             2         3600         80
+hpc.small            4         7200         80
+hpc.medium.westmere  8         14400        80
+hpc.large.westmere   16        28800        80
+hpc.xlarge.westmere  23        42000        80
+==================== ========= ============ ==================
+
+The table above shows the different flavors that are available in ePouta
+initially. If you've used cPouta, you will notice that the flavors in ePouta are
+slightly different. This is because different hardware is used in these two
+clouds. The largest flavor in cPouta would not fit on the servers that were
+added initially to ePouta. More hardware is on its way though, so you can expect
+these flavors to change in the future.
+
+.. image:: ../.static/images/epouta-flavor.png
+
+A specific naming convention is used for the flavors. The first part is the
+intended use for that flavor. Initially this is "hpc" (high performance
+computing) for all flavors as these flavors are intended mainly for heavy
+computation. Later on we may introduce other flavor types. The second part is an
+understandable size for the flavor that tells you how large the flavor is.
+Finally, some of the flavors have a third part which tells you the processor
+architecture (e.g. "westmere") of the virtual machine that you will be running
+if you select that flavor. The flavors whose name has this third part are
+guaranteed to be scheduled on hardware that uses this specific CPU architecture.
+Flavors without this third part can be scheduled on any server that is
+available.
+
+Initially all the servers in ePouta have processors based on Intel's
+`Westmere <https://en.wikipedia.org/wiki/Westmere_%28microarchitecture%29>`_
+microarchitecture. In the next phase, servers with processors based on Intel's
+`Haswell
+<https://en.wikipedia.org/wiki/Haswell_%28microarchitecture%29>`_ architecture will be added.
 
 Using ePouta from the command line
 ..................................
@@ -111,6 +152,8 @@ instances in ePouta. The process for using the tools is exactly the same: you go
 to the web interface to get an openrc file, you source that file and then you
 can start using commands like "openstack server list" or "openstack server
 create".
+
+.. _differences-compared-to-cpouta:
 
 Differences compared to cPouta
 ------------------------------
