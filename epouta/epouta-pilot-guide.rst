@@ -77,8 +77,8 @@ the same one you would use for cPouta. You will need a computing project and
 user accounts added to that computing project. If you don't already have a
 computing project, you need to apply for one here:
 
-`Applying for Computing Resources
-<https://research.csc.fi/applying-for-computing-resources>`_
+`User Accounts and Projects
+<https://research.csc.fi/accounts-and-projects>`_
 
 Logging in
 ..........
