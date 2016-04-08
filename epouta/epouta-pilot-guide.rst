@@ -106,6 +106,10 @@ hpc.small            4         7200         80
 hpc.medium.westmere  8         14400        80
 hpc.large.westmere   16        28800        80
 hpc.xlarge.westmere  23        42000        80
+hpc.medium.haswell   8         40000        80
+hpc.large.haswell    16        80000        80
+hpc.xlarge.haswell   32        160000       80
+hpc.fullnode.haswell 46        248000       80
 ==================== ========= ============ ==================
 
 The table above shows the different flavors that are available in ePouta
@@ -123,17 +127,18 @@ computing) for all flavors as these flavors are intended mainly for heavy
 computation. Later on we may introduce other flavor types. The second part is an
 understandable size for the flavor that tells you how large the flavor is.
 Finally, some of the flavors have a third part which tells you the processor
-architecture (e.g. "westmere") of the virtual machine that you will be running
+architecture (e.g. "westmere", "haswell") of the virtual machine that you will be running
 if you select that flavor. The flavors whose name has this third part are
 guaranteed to be scheduled on hardware that uses this specific CPU architecture.
 Flavors without this third part can be scheduled on any server that is
 available.
 
-Initially all the servers in ePouta have processors based on Intel's
+Initially all the servers in ePouta had processors based on Intel's
 `Westmere <https://en.wikipedia.org/wiki/Westmere_%28microarchitecture%29>`_
-microarchitecture. In the next phase, servers with processors based on Intel's
+microarchitecture. Servers with processors based on Intel's
 `Haswell
-<https://en.wikipedia.org/wiki/Haswell_%28microarchitecture%29>`_ architecture will be added.
+<https://en.wikipedia.org/wiki/Haswell_%28microarchitecture%29>`_ architecture
+were added in Q1/2016.
 
 Using ePouta from the command line
 ..................................
