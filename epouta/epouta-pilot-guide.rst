@@ -88,10 +88,6 @@ mostly follow the `cPouta User Guide
 <https://research.csc.fi/pouta-user-guide>`_ for instructions on how to use
 OpenStack.
 
-When you login, you need to specify a user domain. This is always "users":
-
-.. image:: ../.static/images/horizon-login-domain-users.png
-
 Usage
 -----
 
@@ -166,8 +162,6 @@ Differences compared to cPouta
 * No floating IPs are available to be attached to virtual machines nor will they
   be in the future.
 * The web interface and the APIs are only accessible from whitelisted IP ranges.
-* You need to specify a domain when logging in to the web interface. This is
-  always "users".
 * If you wish to use command line tools, the only command line tool that will
   work at the moment is the common "openstack" tool
 
