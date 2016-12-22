@@ -98,9 +98,9 @@ Usage
 Flavors
 .......
 
-====================  ========= ============ ================== ===================
-**Name**              **VCPUs** **RAM (MB)** **Root disk (GB)** **Billing Units/h**
---------------------  --------- ------------ ------------------ -------------------
+====================  ========= ============ ================== ========
+**Name**              **VCPUs** **RAM (MB)** **Root disk (GB)** **BU/h**
+--------------------  --------- ------------ ------------------ --------
 hpc.mini              2         3600         80                 5
 hpc.small             4         7200         80                 10
 hpc.medium.westmere   8         14400        80                 8
@@ -111,7 +111,7 @@ hpc.medium.haswell    8         40000        80                 20
 hpc.large.haswell     16        80000        80                 40
 hpc.xlarge.haswell    32        160000       80                 80
 hpc.fullnode.haswell  46        248000       80                 120
-===================== ========= ============ ================== ===================
+===================== ========= ============ ================== ========
 
 The table above shows the different flavors that are available in ePouta
 initially. If you've used cPouta, you will notice that the flavors in ePouta are
