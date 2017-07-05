@@ -94,20 +94,26 @@ Usage
 Flavors
 .......
 
-===================== ========= ============ ================== ========
-**Name**              **VCPUs** **RAM (MB)** **Root disk (GB)** **BU/h**
---------------------- --------- ------------ ------------------ --------
-hpc.mini              2         3600         80                 5
-hpc.small             4         7200         80                 10
-hpc.medium.westmere   8         14400        80                 8
-hpc.large.westmere    16        28800        80                 16
-hpc.xlarge.westmere   23        42000        80                 24
-hpc.largemem.westmere 23        92000        80                 36
-hpc.medium.haswell    8         40000        80                 20
-hpc.large.haswell     16        80000        80                 40
-hpc.xlarge.haswell    32        160000       80                 80
-hpc.fullnode.haswell  46        248000       80                 120
-===================== ========= ============ ================== ========
+===================== ========= ============ ================== ======================= ========
+**Name**              **VCPUs** **RAM (MB)** **Root disk (GB)** **Ephemeral disk (GB)** **BU/h**
+--------------------- --------- ------------ ------------------ ----------------------- --------
+hpc.mini              2         3600         80 (Ceph)          0                       5
+hpc.small             4         7200         80 (Ceph)          0                       10
+hpc.medium.westmere   8         14400        80 (Ceph)          0                       8
+hpc.large.westmere    16        28800        80 (Ceph)          0                       16
+hpc.xlarge.westmere   23        42000        80 (Ceph)          0                       24
+hpc.largemem.westmere 23        92000        80 (Ceph)          0                       36
+hpc.medium.haswell    8         40000        80 (Ceph)          0                       20
+hpc.large.haswell     16        80000        80 (Ceph)          0                       40
+hpc.xlarge.haswell    32        160000       80 (Ceph)          0                       80
+hpc.fullnode.haswell  46        248000       80 (Ceph)          0                       120
+io.haswell.8core      8         40000        20 (SSD/RAID0)     350 (SSD/RAID0)         25
+io.haswell.16core     16        80000        20 (SSD/RAID0)     700 (SSD/RAID0)         50
+io.haswell.32core     32        160000       20 (SSD/RAID0)     1400 (SSD/RAID0)        100
+io.haswell.46core     46        248000       20 (SSD/RAID0)     2100 (SSD/RAID0)        150
+tb.westmere.32core    32        500000       80 (SAS/RAID6)     3250 (SAS/RAID6)        320
+tb.westmere.64core    64        1000000      80 (SAS/RAID6)     6500 (SAS/RAID6)        640
+===================== ========= ============ ================== ======================= ========
 
 The table above shows the different flavors that are available in ePouta
 initially. If you've used cPouta, you will notice that the flavors in ePouta are
