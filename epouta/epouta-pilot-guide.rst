@@ -1,28 +1,10 @@
-ePouta pilot user guide
-=======================
-
-.. note::
-
-   ePouta is currently only available for selected pilot users. If you are not a
-   selected pilot user, then this documentation is most likely not very useful
-   for you.
+ePouta user guide
+=================
 
 This guide gives some basic information about using ePouta. As a service it is
 quite similar to cPouta, so if you are familiar with that service you should be
 able to start using ePouta quite easily. There are some differences which are
 listed under the heading ":ref:`differences-compared-to-cpouta`".
-
-Pilot use disclaimer
---------------------
-
-Any virtual machines or other resources that are launched during the pilot phase
-may be removed either at some stage during the pilot phase if changes are made
-or when the service moves into production. We will give you notice about any
-destructive or potentially destructive changes beforehand. As with any IaaS
-cloud service, it is a good practice to build your resources in a way that is
-easy to replicate in a situation where existing resources get destroyed. We
-recommend using configuration management tools when deploying virtual machines
-in the cloud.
 
 Initial setup for customers
 ---------------------------
@@ -145,12 +127,6 @@ were added in Q1/2016.
 
 Using ePouta from the command line
 ..................................
-
-.. note::
-
-   You can only use the common "openstack" tool with ePouta. The other tools
-   (nova, cinder, glance, neutron) do not work as they do not have support for
-   domains.
 
 You can find instructions on command line usage from the `cPouta user guide
 <https://research.csc.fi/pouta-command-line-tools>`_. The commands listed on that
