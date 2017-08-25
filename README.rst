@@ -109,3 +109,8 @@ Once you have a good set of changes ready, you can commit them to Git::
         git add --all
         git commit
         *add a good commit message*
+
+Step 7: Start a build
+.............................
+
+Visit https://readthedocs.org/projects/csc-cloud-manuals/ and press "build".
