@@ -146,7 +146,9 @@ Differences compared to cPouta
   be in the future.
 * The web interface and the APIs are only accessible from whitelisted IP ranges.
 * If you wish to use command line tools, the only command line tool that will
-  work at the moment is the common "openstack" tool
+  work at the moment is the common "openstack" tool.
+* There is no Magnum support in ePouta, since it's not possible to use Magnum
+  without an external network.
 
 Getting support
 ---------------
