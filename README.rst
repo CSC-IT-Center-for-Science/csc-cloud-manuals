@@ -1,3 +1,8 @@
+DEPRECATED
+=================
+
+New location: https://research.csc.fi/pouta-user-guide
+
 CSC cloud manuals
 =================
 
