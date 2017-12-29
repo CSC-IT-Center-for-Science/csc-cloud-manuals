@@ -6,7 +6,7 @@
 CSC Extra Cloud Manuals
 =======================
 
-This page contains documentation that doesn't fit for one reason or another under the generic cloud user guide in under the main `CSC Services for Research <https://research.csc.fi>`_ webpage.
+The documentation previously hosted here has been moved to the `Pouta User Guide <https://research.csc.fi/pouta-user-guide>`_.
 
 Contents:
 
